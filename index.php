@@ -12,16 +12,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AXIOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </head>
 <body>
-    
 
 
+<div id="app">
+    <div class="container my-5">
+        <div class="col-4">
+            <h1> {{ title }} </h1>
+            <form action="index.php" method="POST">
+                <ul class="list-group">
+                    <li v-for="(task, i) in list" :key="i" class="list-group-item">{{task}}</li>
+                </ul>
+                <input type="text" name="task" id="task">
+            </form>
+        </div>
+    </div>
+</div>
 
+<!-- JS -->
+<script src="main.js" type="text/javascript"></script>
 
-
-
-
-    <script src="/js/main.js" type="text/javascript"></script>
 </body>
 </html>
