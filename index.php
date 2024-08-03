@@ -18,17 +18,17 @@
 
 
 <div id="app">
-    <div class="container my-5">
-        <div class="col-4">
-            <h1> {{ title }} </h1>
-            <form action="index.php" method="POST">
+        <div class="container my-5">
+            <div class="col-4">
+                <h1> {{ title }} </h1>
                 <ul class="list-group">
                     <li v-for="(task, i) in list" :key="i" class="list-group-item">{{task}}</li>
                 </ul>
-                <input type="text" name="task" id="task">
-            </form>
-        </div>
-    </div>
+            <input @keyup.enter="addTask" v-model="newTask" type="text" name="task" id="task">
+            <button @click="addTask">Add</button>
+            </div>
+        </div> 
+    
 </div>
 
 <!-- JS -->
